@@ -17,15 +17,15 @@ public class MobileManager : MonoBehaviour {
 
 	void Update(){
 		if(!pausabool){
-		if(Input.GetKeyDown(KeyCode.Menu)){
-			if(!estado){
-				Sacar();
-			}
-		}
-		if(Input.GetKeyDown(KeyCode.A)){
-			if(!estado){
-				Sacar();
-			}
+		    if(Input.GetKeyDown(KeyCode.Menu)){
+			    if(!estado){
+			    	Sacar();
+			    }
+		    }
+		    if(Input.GetKeyDown(KeyCode.A)){
+			    if(!estado){
+			    	Sacar();
+			    }
 		}
 
 		if(Input.GetKeyDown(KeyCode.Escape)){

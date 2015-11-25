@@ -55,6 +55,7 @@ public class ManagerCelular : MonoBehaviour {
 	}
 
 	public void Boton(int go){
+        Debug.Log("BOTON JUGANDO");
 		jugando=true;
 		tiempoamount=1;
 		red=redessociales[go];

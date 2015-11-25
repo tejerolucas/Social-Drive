@@ -19,18 +19,18 @@ public class SocialManager : MonoBehaviour {
 	
 	void Update () {
 		if(ManagerCelular.jugando){
-		if(canvas.alpha>0){
-			if(cantidadinterna<=0){
-				if(ManagerCelular.jugando){
-					cantidadinterna=10;
-					Debug.Log("GANASTE");
-					Limpiarestados();
-					GameObject.Find("Celular").GetComponent<ManagerCelular>().Gane();
-				}
-			}else{
-				barra.fillAmount=ManagerCelular.tiempoamount;
-			}
-		}
+		    if(canvas.alpha>0){
+			    if(cantidadinterna<=0){
+				    if(ManagerCelular.jugando){
+					    cantidadinterna=10;
+					    Debug.Log("GANASTE");
+					    Limpiarestados();
+					    GameObject.Find("Celular").GetComponent<ManagerCelular>().Gane();
+				    }
+			    }else{
+				    barra.fillAmount=ManagerCelular.tiempoamount;
+			    }
+		    }
 		}else{
 			if(estados.Count>0){
 				Limpiarestados();

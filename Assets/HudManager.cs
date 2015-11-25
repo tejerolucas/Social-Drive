@@ -27,7 +27,6 @@ public class HudManager : MonoBehaviour {
 		moviendo=false;
 	}
 	
-	// Update is called once per frame
 	public void boton (int direccion) {
 		if(!moviendo){
 			Debug.Log("BOTON");
