@@ -18,9 +18,13 @@ namespace MaterialUI
 		public ScreenConfig[] screens;
 		[HideInInspector]
 		public ScreenConfig currentScreen;
-		[HideInInspector]
+		//[HideInInspector]
 		public ScreenConfig lastScreen;
 
+		void Start(){
+			lastScreen = screens [0];
+			currentScreen = screens [0];
+		}
 		public void Set(int index)
 		{
 			screens[index].transform.SetAsLastSibling();

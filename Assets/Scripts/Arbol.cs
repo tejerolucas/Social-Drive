@@ -5,7 +5,7 @@ public class Arbol : MonoBehaviour {
 	private float velocidad;
 	// Use this for initialization
 	void Start () {
-		velocidad=Manager.velocidad;
+		//velocidad=Manager.velocidad;
 	}
 	
 	// Update is called once per frame

@@ -2,7 +2,7 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!114 &1
 MonoBehaviour:
-  m_ObjectHideFlags: 4
+  m_ObjectHideFlags: 52
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
@@ -52,3 +52,5 @@ MonoBehaviour:
     m_Color: {r: .933333337, g: .933333337, b: .933333337, a: 1}
   - m_Name: Grey 900
     m_Color: {r: .129411772, g: .129411772, b: .129411772, a: 1}
+  - m_Name: White
+    m_Color: {r: 1, g: 1, b: 1, a: 1}

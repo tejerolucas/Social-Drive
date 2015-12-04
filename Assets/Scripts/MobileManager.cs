@@ -17,7 +17,6 @@ public class MobileManager : MonoBehaviour {
 
 	void Update(){
 		if(!pausabool){
-<<<<<<< HEAD:Assets/Scripts/MobileManager.cs
 			if(Input.GetKeyDown(KeyCode.Menu)){
 				if(!estado){
 					Sacar();
@@ -28,18 +27,6 @@ public class MobileManager : MonoBehaviour {
 					Sacar();
 				}
 			}
-=======
-		    if(Input.GetKeyDown(KeyCode.Menu)){
-			    if(!estado){
-			    	Sacar();
-			    }
-		    }
-		    if(Input.GetKeyDown(KeyCode.A)){
-			    if(!estado){
-			    	Sacar();
-			    }
-		}
->>>>>>> origin/master:Assets/MobileManager.cs
 
 			if(Input.GetKeyDown(KeyCode.Escape)){
 				if(estado){

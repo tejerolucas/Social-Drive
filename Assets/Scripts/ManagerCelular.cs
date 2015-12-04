@@ -46,7 +46,7 @@ public class ManagerCelular : MonoBehaviour {
 	void iniciartimer(){
 		Debug.Log("INICIAR TIMER");
 		Debug.Log(tiempo);
-		iTween.ValueTo(this.gameObject,iTween.Hash("from",1,"to",0,"time",tiempo,"onupdatetarget",this.gameObject,"onupdate","timer","oncompletetarget",this.gameObject,"oncomplete","terminotiempo"));
+		//iTween.ValueTo(this.gameObject,iTween.Hash("from",1,"to",0,"time",tiempo,"onupdatetarget",this.gameObject,"onupdate","timer","oncompletetarget",this.gameObject,"oncomplete","terminotiempo"));
 	}
 
 	void canvasalpha(float valor){

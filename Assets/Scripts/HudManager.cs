@@ -20,7 +20,7 @@ public class HudManager : MonoBehaviour {
 	}
 	void mover(float valor){
 		moviendo=true;
-		auto.transform.position=new Vector3(0,10,valor);
+		auto.transform.position=new Vector3(-940,10,valor);
 	}
 
 	void moverfin(){
@@ -28,7 +28,6 @@ public class HudManager : MonoBehaviour {
 	}
 	
 	public void boton (int direccion) {
-		if(!moviendo){
 			Debug.Log("BOTON");
 			if(direccion==1){
 				if(auto.transform.position.z<=10){
@@ -41,6 +40,5 @@ public class HudManager : MonoBehaviour {
 					iTween.ValueTo(this.gameObject,iTween.Hash("from",auto.transform.position.z,"to",auto.transform.position.z-18,"time",0.3f,"onupdatetarget",this.gameObject,"onupdate","mover","oncompletetarget",this.gameObject,"oncomplete","moverfin"));
 				}
 			}
-		}
 	}
 }
