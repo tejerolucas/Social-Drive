@@ -1,0 +1,25 @@
+﻿<Properties>
+<<<<<<< HEAD
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/HudManager.cs">
+    <Files>
+      <File FileName="Assets/Scripts/salir.cs" Line="11" Column="1" />
+      <File FileName="Assets/Materiales/Planotransparente.shader" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/cambiarescena.cs" Line="1" Column="1" />
+      <File FileName="Assets/MobileManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/HudManager.cs" Line="11" Column="16" />
+      <File FileName="Assets/FingerGestures/Scripts/FingerGestures.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/ManagerCelular.cs" Line="43" Column="37" />
+=======
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\cambiarvolumen.cs">
+    <Files>
+      <File FileName="Assets\Scripts\cambiarvolumen.cs" Line="3" Column="24" />
+>>>>>>> origin/master
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

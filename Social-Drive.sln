@@ -1,0 +1,75 @@
+<<<<<<< HEAD
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{02B252B8-4838-9260-805E-617029AE7E17}") = "Social-Drive", "Assembly-CSharp.csproj", "{1A63A64D-320A-12CE-AC56-0080971D4300}"
+EndProject
+Project("{02B252B8-4838-9260-805E-617029AE7E17}") = "Social-Drive", "Assembly-CSharp-Editor.csproj", "{EA2FE308-3AFC-C405-288B-4CB95A71E950}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1A63A64D-320A-12CE-AC56-0080971D4300}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A63A64D-320A-12CE-AC56-0080971D4300}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A63A64D-320A-12CE-AC56-0080971D4300}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A63A64D-320A-12CE-AC56-0080971D4300}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA2FE308-3AFC-C405-288B-4CB95A71E950}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA2FE308-3AFC-C405-288B-4CB95A71E950}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA2FE308-3AFC-C405-288B-4CB95A71E950}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA2FE308-3AFC-C405-288B-4CB95A71E950}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+														GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+		Policies = $0
+		$0.TextStylePolicy = $1
+		$1.inheritsSet = null
+		$1.scope = text/x-csharp
+		$0.CSharpFormattingPolicy = $2
+		$2.inheritsSet = Mono
+		$2.inheritsScope = text/x-csharp
+		$2.scope = text/x-csharp
+		$0.TextStylePolicy = $3
+		$3.FileWidth = 120
+		$3.TabWidth = 4
+		$3.IndentWidth = 4
+		$3.EolMarker = Unix
+		$3.inheritsSet = Mono
+		$3.inheritsScope = text/plain
+		$3.scope = text/plain
+	EndGlobalSection
+
+EndGlobal
+=======
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Social-Drive.CSharp", "Social-Drive.CSharp.csproj", "{5A11E96F-7135-3178-F6C7-D69A7404ACA0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Social-Drive.CSharp.Editor", "Social-Drive.CSharp.Editor.csproj", "{332B8F70-8F1D-D6F5-B354-02B1C245CDCF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5A11E96F-7135-3178-F6C7-D69A7404ACA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A11E96F-7135-3178-F6C7-D69A7404ACA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A11E96F-7135-3178-F6C7-D69A7404ACA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A11E96F-7135-3178-F6C7-D69A7404ACA0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{332B8F70-8F1D-D6F5-B354-02B1C245CDCF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{332B8F70-8F1D-D6F5-B354-02B1C245CDCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{332B8F70-8F1D-D6F5-B354-02B1C245CDCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{332B8F70-8F1D-D6F5-B354-02B1C245CDCF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
+>>>>>>> origin/master
