@@ -8,8 +8,10 @@ public class MobileManager : MonoBehaviour {
 	public float inicialpos;
 	private bool estado;
 	private bool pausabool;
+	public float tiempotrans;
 
 	void Start () {
+		tiempotrans=0.2f;
 		pausabool=false;
 		estado=false;
 		inicialpos=recttrans.anchoredPosition.y;
@@ -54,13 +56,13 @@ public class MobileManager : MonoBehaviour {
 
 	void Sacar(){
 		estado=true;
-		iTween.ValueTo(this.gameObject,iTween.Hash("from",0,"to",1,"time",0.3f,"onupdatetarget",this.gameObject,"onupdate","canvasalpha"));
-		iTween.ValueTo(this.gameObject,iTween.Hash("from",recttrans.anchoredPosition.y,"to",0,"time",0.5f,"onupdatetarget",this.gameObject,"onupdate","posi"));
+		iTween.ValueTo(this.gameObject,iTween.Hash("from",0,"to",1,"time",tiempotrans,"onupdatetarget",this.gameObject,"onupdate","canvasalpha"));
+		iTween.ValueTo(this.gameObject,iTween.Hash("from",recttrans.anchoredPosition.y,"to",0,"time",tiempotrans,"onupdatetarget",this.gameObject,"onupdate","posi"));
 	}
 
 	void Bajar(){
 		estado=false;
-		iTween.ValueTo(this.gameObject,iTween.Hash("from",1,"to",0,"time",0.3f,"onupdatetarget",this.gameObject,"onupdate","canvasalpha"));
-		iTween.ValueTo(this.gameObject,iTween.Hash("from",0,"to",inicialpos,"time",0.5f,"onupdatetarget",this.gameObject,"onupdate","posi"));
+		iTween.ValueTo(this.gameObject,iTween.Hash("from",1,"to",0,"time",tiempotrans,"onupdatetarget",this.gameObject,"onupdate","canvasalpha"));
+		iTween.ValueTo(this.gameObject,iTween.Hash("from",0,"to",inicialpos,"time",tiempotrans,"onupdatetarget",this.gameObject,"onupdate","posi"));
 	}
 }
