@@ -13,12 +13,12 @@ public class Spawner : MonoBehaviour {
 	
 
 	void Update () {
-//		if(Manager.jugando){
-//			if((Time.time-tiempo)>intervalo){
-//				tiempo=Time.time;
-//				Instantiate(objeto,new Vector3(transform.position.x,transform.position.y,Random.Range(transform.position.z-ancho,transform.position.z+ancho)),this.transform.rotation);
-//			}
-//		}
+		if(ManagerGame.jugando){
+			if((Time.time-tiempo)>intervalo){
+				tiempo=Time.time;
+				Instantiate(objeto,new Vector3(transform.position.x,transform.position.y,Random.Range(transform.position.z-ancho,transform.position.z+ancho)),this.transform.rotation);
+			}
+		}
 	}
 
 	void OnDrawGizmos(){

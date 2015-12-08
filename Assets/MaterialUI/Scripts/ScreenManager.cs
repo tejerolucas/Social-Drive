@@ -16,7 +16,6 @@ namespace MaterialUI
 	public class ScreenManager : MonoBehaviour
 	{
 		public ScreenConfig[] screens;
-		[HideInInspector]
 		public ScreenConfig currentScreen;
 		//[HideInInspector]
 		public ScreenConfig lastScreen;

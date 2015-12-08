@@ -5,11 +5,7 @@ using System.Reflection;
 
 namespace MaterialUI
 {
-	public class EZAnim : MonoBehaviour
-	{
-		public bool StartAnimated;
-		public float StartAnimatedDelay;
-		[HideInInspector()]
+	public class EZAnim : MonoBehaviour{
 		public List<EZStruct> theStructs;
 
 		private bool[] activeList;
@@ -49,9 +45,6 @@ namespace MaterialUI
 				}
 					
 				theStructs[i] = tempStruct;
-			}
-			if(StartAnimated){
-				Invoke("AnimateAll",StartAnimatedDelay);
 			}
 		}
 
@@ -155,6 +148,15 @@ namespace MaterialUI
 				if (theStructs[i].animTag == tag)
 					AnimStruct(i);
 			}
+		}
+
+		public void SetTarget0(Vector3 target){
+			if(theStructs.Count>1){
+				Debug.LogError("MAS DE UNA ANIMACION");
+			}
+			EZStruct structnew=theStructs[0];
+			structnew.targetVector3=target;
+			theStructs[0]=structnew;
 		}
 
 		void Update()

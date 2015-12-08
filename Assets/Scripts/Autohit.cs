@@ -6,13 +6,12 @@ public class Autohit : MonoBehaviour {
 	private float velocidad;
 	private GameObject auto;
 	private bool check=true;
-	// Use this for initialization
 	void Start () {
-	//	velocidad=Jugador.velocidad;
 		auto=GameObject.FindWithTag("Auto");
 	}
 
 	void Update () {
+		velocidad=ManagerGame.velocidad;
 		this.transform.position+=velocidad*Time.deltaTime*this.transform.right*-1;
 		if(check){
 			if(Vector3.Distance(this.transform.position,auto.transform.position)<distancia){

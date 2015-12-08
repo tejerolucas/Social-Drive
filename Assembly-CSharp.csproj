@@ -80,6 +80,8 @@
      <Compile Include="Assets\FingerGestures\Scripts\Toolbox\TBPinchToScale.cs" />
      <Compile Include="Assets\FingerGestures\Scripts\Toolbox\TBQuickSetup.cs" />
      <Compile Include="Assets\FingerGestures\Scripts\Toolbox\TBTwistToRotate.cs" />
+     <Compile Include="Assets\GuardarCelular.cs" />
+     <Compile Include="Assets\ManagerGame.cs" />
      <Compile Include="Assets\MaterialUI\Examples\Scripts\04 - RadioButton\Example04.cs" />
      <Compile Include="Assets\MaterialUI\Examples\Scripts\05 - Sliders\Example05.cs" />
      <Compile Include="Assets\MaterialUI\Scripts\Anim.cs" />
@@ -122,6 +124,8 @@
      <Compile Include="Assets\MaterialUI\Scripts\Toaster.cs" />
      <Compile Include="Assets\MaterialUI\Scripts\ToggleConfig.cs" />
      <Compile Include="Assets\MaterialUI\Scripts\ToggleTextChanger.cs" />
+     <Compile Include="Assets\Pantallaactiva.cs" />
+     <Compile Include="Assets\SacarCelular.cs" />
      <Compile Include="Assets\Scripts\Arbol.cs" />
      <Compile Include="Assets\Scripts\Autohit.cs" />
      <Compile Include="Assets\Scripts\Chautexto.cs" />
@@ -164,10 +168,12 @@
      <Compile Include="Assets\Scripts\timer.cs" />
      <Compile Include="Assets\Scripts\uGUITools.cs" />
      <Compile Include="Assets\Scripts\valor.cs" />
+     <Compile Include="Assets\autoinicio.cs" />
      <Compile Include="Assets\iTween\Plugins\iTween.cs" />
      <Compile Include="Assets\iTween\Sample\MoveSample.cs" />
      <Compile Include="Assets\iTween\Sample\RotateSample.cs" />
      <Compile Include="Assets\iTween\Sample\SampleInfo.cs" />
+     <Compile Include="Assets\teclaback.cs" />
      <None Include="Assets\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlendOneOne.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\NoiseEffectShaderRGB.shader" />
