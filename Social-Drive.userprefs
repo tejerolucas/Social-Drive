@@ -1,16 +1,11 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/SacarCelular.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Autohit.cs">
     <Files>
-      <File FileName="Assets/ManagerGame.cs" Line="36" Column="12" />
-      <File FileName="Assets/MaterialUI/Scripts/ScreenManager.cs" Line="1" Column="1" />
-      <File FileName="Assets/MaterialUI/Scripts/EZAnim.cs" Line="1" Column="1" />
-      <File FileName="Assets/MaterialUI/Scripts/Anim.cs" Line="1" Column="1" />
-      <File FileName="Assets/teclaback.cs" Line="1" Column="1" />
-      <File FileName="Assets/Pantallaactiva.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/ManagerCelular.cs" Line="1" Column="1" />
-      <File FileName="Assets/SacarCelular.cs" Line="13" Column="36" />
-      <File FileName="Assets/GuardarCelular.cs" Line="16" Column="7" />
+      <File FileName="Assets\ManagerGame.cs" Line="62" Column="1" />
+      <File FileName="Assets\Scripts\Spawner.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Arbol.cs" Line="14" Column="1" />
+      <File FileName="Assets\Scripts\Autohit.cs" Line="26" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

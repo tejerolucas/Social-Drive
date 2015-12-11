@@ -39,6 +39,10 @@ public class ManagerGame : MonoBehaviour {
 		izquierda.AnimateAll();
 	}
 
+	public void Pausa(){
+		jugando = false;
+	}
+
 	void acelerando(float valor){
 		velocidad=valor;
 	}
