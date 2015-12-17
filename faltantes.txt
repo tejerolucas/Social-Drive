@@ -1,0 +1,45 @@
+PROGRAMACION:
+-spawner de autos
+-pool de arboles
+-pool de autos
+-pool de monedas
+-pool de powerUps
+-salida cartel achievement
+
+
+DISEÑO:
+-3d monedas
+-3d powerups
+-cartel de achievement
+-achievements(separados por tipo)
+-icono sacar foto
+-particulas choque
+-particulas moneda
+-particulas powerup
+-feedback choque
+-feedback Social
+-dos autos
+-taxi?
+-camion
+-dos arboles
+
+AUDIO:
+-moneda
+-powerup
+-musica
+-selfie
+-camara
+-derrota
+
+
+
+
+
+
+
+
+Sacar contador de metros
+buscar relacion entre celular y mundo
+estacion de servicio
+nafta monedas
+

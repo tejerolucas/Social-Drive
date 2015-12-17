@@ -25,7 +25,7 @@ public class SocialManager : MonoBehaviour {
 					    cantidadinterna=10;
 					    Debug.Log("GANASTE");
 					    Limpiarestados();
-					    GameObject.Find("Celular").GetComponent<ManagerCelular>().Gane();
+					    GameObject.Find("Manager").GetComponent<ManagerCelular>().Gane();
 				    }
 			    }else{
 				    barra.fillAmount=ManagerCelular.tiempoamount;
@@ -39,7 +39,6 @@ public class SocialManager : MonoBehaviour {
 	}
 
 	public void CrearEstados(){
-		Debug.Log("crear");
 		barra.fillAmount=1;
 		cantidadinterna=0;
 		for(int i=0;i<cantidad;i++){
@@ -54,7 +53,6 @@ public class SocialManager : MonoBehaviour {
 	}
 
 	void Limpiarestados(){
-		Debug.Log("limpiar");
 		foreach(GameObject go in estados){
 			if(go!=null){
 				go.GetComponent<estadofacebook>().destruir();

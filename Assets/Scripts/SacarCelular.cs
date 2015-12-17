@@ -6,14 +6,23 @@ public class SacarCelular : MonoBehaviour {
 	public ScreenManager screenm;
 	
 	void Update () {
-		if(Input.GetKeyDown(KeyCode.Menu)){
-			screenm.Set("Celular");
+		if(!ManagerGame.celular){
+
+			if(Input.GetKeyDown(KeyCode.Menu)){
+				accion();
+			}
+			#if UNITY_EDITOR
+			if(Input.GetKeyDown(KeyCode.Space)){
+				accion();
+			}
+			#endif
 		}
-		#if UNITY_EDITOR
-		if(Input.GetKeyDown(KeyCode.Space)){
-			Debug.Log("SACO");
-			screenm.Set("Celular");
-		}
-		#endif
+	}
+
+	void accion(){
+		Debug.Log("SACO");
+		screenm.Set("Celular");
+		ManagerGame.celular=true;
+		Debug.Log("CELULAR");
 	}
 }

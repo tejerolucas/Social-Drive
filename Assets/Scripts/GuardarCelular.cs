@@ -6,14 +6,21 @@ public class GuardarCelular : MonoBehaviour {
 	public ScreenManager screenm;
 	
 	void Update () {
-		if(Input.GetKeyDown(KeyCode.Escape)){
-			screenm.Set("Game");
+		if(ManagerGame.celular){
+			if(Input.GetKeyDown(KeyCode.Escape)){
+				accion();
+			}
+			#if UNITY_EDITOR
+			if(Input.GetKeyDown(KeyCode.Backspace)){
+				accion();
+			}
+			#endif
 		}
-#if UNITY_EDITOR
-		if(Input.GetKeyDown(KeyCode.Backspace)){
-			screenm.currentScreen.Hide();
-			screenm.Set("Game");
-		}
-#endif
+	}
+
+	void accion(){
+		screenm.currentScreen.Hide();
+		screenm.Set("Game");
+		ManagerGame.celular=false;
 	}
 }

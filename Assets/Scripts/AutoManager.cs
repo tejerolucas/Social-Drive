@@ -9,6 +9,7 @@ public class AutoManager : MonoBehaviour {
 	public GameObject punta;
 	public GameObject part;
 	public static AsyncOperation async;
+	public EZAnim animacionGameOut;
 
 
 	
@@ -18,6 +19,7 @@ public class AutoManager : MonoBehaviour {
 			screenmanager.currentScreen.Hide();
 			screenmanager.Set("Game");
 		}
+		animacionGameOut.AnimateAll();
 		ManagerGame.velocidad=0;
 		Transform trans=poschoques[Random.Range(0,poschoques.Length)];
 		iTween.RotateTo(cam.gameObject,iTween.Hash("time",0.7f,"rotation",trans));
@@ -27,7 +29,7 @@ public class AutoManager : MonoBehaviour {
 	void particulas(){
 		StartCoroutine("load");
 		Instantiate(part,punta.transform.position,this.transform.rotation);
-		Invoke("fin",0.8f);
+		Invoke("fin",1.1f);
 	}
 
 	IEnumerator load() {

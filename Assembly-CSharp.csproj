@@ -45,8 +45,6 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\AutoManager.cs" />
-     <Compile Include="Assets\Fin.cs" />
      <Compile Include="Assets\FingerGestures\Dev\FingerDebug.cs" />
      <Compile Include="Assets\FingerGestures\Scripts\Base\ContinuousGestureRecognizer.cs" />
      <Compile Include="Assets\FingerGestures\Scripts\Base\DiscreteGestureRecognizer.cs" />
@@ -137,12 +135,14 @@
      <Compile Include="Assets\MaterialUI\Scripts\ToggleConfig.cs" />
      <Compile Include="Assets\MaterialUI\Scripts\ToggleTextChanger.cs" />
      <Compile Include="Assets\Scripts\Arbol.cs" />
+     <Compile Include="Assets\Scripts\AutoManager.cs" />
      <Compile Include="Assets\Scripts\Autohit.cs" />
      <Compile Include="Assets\Scripts\Chautexto.cs" />
      <Compile Include="Assets\Scripts\Crearruta.cs" />
      <Compile Include="Assets\Scripts\DebugReceiver.cs" />
      <Compile Include="Assets\Scripts\Destructor.cs" />
      <Compile Include="Assets\Scripts\Distancia.cs" />
+     <Compile Include="Assets\Scripts\Fin.cs" />
      <Compile Include="Assets\Scripts\GuardarCelular.cs" />
      <Compile Include="Assets\Scripts\HudManager.cs" />
      <Compile Include="Assets\Scripts\HudMsg.cs" />
@@ -167,6 +167,7 @@
      <Compile Include="Assets\Scripts\botonmenu.cs" />
      <Compile Include="Assets\Scripts\cambiarcolor.cs" />
      <Compile Include="Assets\Scripts\cambiarescena.cs" />
+     <Compile Include="Assets\Scripts\cambiarmaterial.cs" />
      <Compile Include="Assets\Scripts\cambiarvolumen.cs" />
      <Compile Include="Assets\Scripts\elementopreferred.cs" />
      <Compile Include="Assets\Scripts\estadofacebook.cs" />
@@ -178,18 +179,19 @@
      <Compile Include="Assets\Scripts\mensaje.cs" />
      <Compile Include="Assets\Scripts\mostrarachievement.cs" />
      <Compile Include="Assets\Scripts\pantallamanager.cs" />
+     <Compile Include="Assets\Scripts\poschoque.cs" />
      <Compile Include="Assets\Scripts\salir.cs" />
+     <Compile Include="Assets\Scripts\spawnerautos.cs" />
      <Compile Include="Assets\Scripts\teclaback.cs" />
      <Compile Include="Assets\Scripts\teclado.cs" />
      <Compile Include="Assets\Scripts\timer.cs" />
      <Compile Include="Assets\Scripts\uGUITools.cs" />
      <Compile Include="Assets\Scripts\valor.cs" />
+     <Compile Include="Assets\Scripts\webcamui.cs" />
      <Compile Include="Assets\iTween\Plugins\iTween.cs" />
      <Compile Include="Assets\iTween\Sample\MoveSample.cs" />
      <Compile Include="Assets\iTween\Sample\RotateSample.cs" />
      <Compile Include="Assets\iTween\Sample\SampleInfo.cs" />
-     <Compile Include="Assets\poschoque.cs" />
-     <Compile Include="Assets\spawnerautos.cs" />
      <None Include="Assets\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlendOneOne.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\NoiseEffectShaderRGB.shader" />
@@ -218,6 +220,7 @@
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\SSAA.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\RadialBlur.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_DepthOfField\DepthOfFieldDX11.shader" />
+     <None Include="Assets\75443_Suburb_Assets_pt1\license.txt" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ContrastComposite.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\FXAAPreset3.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\FisheyeShader.shader" />
@@ -234,6 +237,7 @@
      <None Include="Assets\MaterialUI\Fonts\NOTICE.txt" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ColorCorrectionCurvesSimple.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\NoiseEffectShaderYUV.shader" />
+     <None Include="Assets\75443_Suburb_Assets_pt1\readme.txt" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\CreaseApply.shader" />
      <None Include="Assets\JMO Assets\!JMO Assets Readme.txt" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ChromaticAberrationShader.shader" />

@@ -1,23 +1,31 @@
 ﻿using UnityEngine;
 using System.Collections;
+using MaterialUI;
 
 public class ManagerCelular : MonoBehaviour {
-	public Color colorfinal;
+
 	public CanvasGroup timerclock;
 	public timer timerscript;
 	public static int cantidad;
 	public static int cantidadestados;
 	public float tiempo;
+	public float tiempotemp;
 	public static float tiempoamount;
 	public GameObject[] redessociales;
 	private GameObject red;
 	public static bool jugando;
+	public EZAnim animacionGameOut;
+	public ScreenManager screenmanager;
+	public static bool pausa;
 
 	void Awake () {
+		pausa=false;
 		cantidadestados=cantidad;
 		jugando=false;
 	}
-	
+
+
+
 	public void Gane(){
 		iTween.Stop();
 		jugando=false;
@@ -35,18 +43,44 @@ public class ManagerCelular : MonoBehaviour {
 		tiempoamount=valor;
 	}
 
+	void Update(){
+		if(jugando&&(!pausa)){
+			tiempotemp-=Time.deltaTime;
+			tiempoamount=tiempotemp/tiempo;
+			if(tiempotemp<=0){
+				terminotiempo();
+			}
+		}
+	}
+
+	public void resume(){
+		pausa=false;
+		iTween.Resume(this.gameObject);
+	}
+
 	void terminotiempo(){
+		if(screenmanager.currentScreen.name=="Celular"){
+			screenmanager.currentScreen.Hide();
+			screenmanager.Set("Game");
+		}
+		timerclock.alpha=0;
+		ManagerGame.velocidad=0;
 		iTween.Stop();
 		Debug.Log(tiempo);
 		Debug.Log("SIN TIEMPOOOOO");
 		jugando=false;
-		Application.LoadLevel("perdiste");
+		animacionGameOut.AnimateAll();
+		Invoke("fin",1.1f);
+	}
+
+	void fin(){
+		screenmanager.Set("Fin");
 	}
 
 	void iniciartimer(){
 		Debug.Log("INICIAR TIMER");
 		Debug.Log(tiempo);
-		//iTween.ValueTo(this.gameObject,iTween.Hash("from",1,"to",0,"time",tiempo,"onupdatetarget",this.gameObject,"onupdate","timer","oncompletetarget",this.gameObject,"oncomplete","terminotiempo"));
+		jugando=true;
 	}
 
 	void canvasalpha(float valor){
@@ -55,9 +89,8 @@ public class ManagerCelular : MonoBehaviour {
 	}
 
 	public void Boton(int go){
-        Debug.Log("BOTON JUGANDO");
-		jugando=true;
 		tiempoamount=1;
+		tiempotemp=tiempo;
 		red=redessociales[go];
 		timerscript.red(go);
 		red.GetComponent<SocialManager>().CrearEstados();

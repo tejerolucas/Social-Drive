@@ -7,15 +7,40 @@ public class ManagerGame : MonoBehaviour {
 	public static float velocidad;
 	public static bool jugando;
 	public Text kilometrostxt;
-	private float kilometros;
+	private float metros;
 	public GameObject auto;
 	public EZAnim derecha;
 	public EZAnim izquierda;
+	public static bool celular;
+	private float delaymin;
+	private float delaymax;
+	public ManagerCelular mancelular;
+	public ScreenManager screenmanager;
+
+	void Start(){
+		delaymin=5;
+		delaymax=10;
+		celular=false;
+	}
 
 	public void Acelerar () {
 		jugando=true;
 		iTween.ValueTo(this.gameObject,iTween.Hash("time",1.5f,"from",0,"to",100,"onupdatetarget",this.gameObject,"onupdate","acelerando"));
+		float delay=Random.Range(delaymin,delaymax);
+		Invoke("SendButton",delay);
 	}
+
+	void SendButton(){
+		if(ManagerGame.jugando){
+			if(!ManagerCelular.jugando){
+				float delay=Random.Range(delaymin,delaymax);
+				Invoke("SendButton",delay);
+				mancelular.Boton(0);
+			}
+		}
+	}
+
+
 
 	public void Derecha(){
 		Vector3 pos=Vector3.zero;
@@ -41,6 +66,13 @@ public class ManagerGame : MonoBehaviour {
 
 	public void Pausa(){
 		jugando = false;
+		ManagerCelular.pausa=true;
+		Invoke ("cambiarpausa",0.5f);
+	}
+
+	void cambiarpausa(){
+		screenmanager.Set("Pausa");
+
 	}
 
 	void acelerando(float valor){
@@ -49,8 +81,12 @@ public class ManagerGame : MonoBehaviour {
 
 	void Update(){
 		if(jugando){
-			kilometros+=velocidad/100000;
-			kilometrostxt.text=((int)kilometros).ToString()+" Kms";
+			metros+=velocidad/1000;
+			if(metros>1000){
+				kilometrostxt.text=((int)metros/1000).ToString()+" Kms";
+			}else{
+				kilometrostxt.text=((int)metros).ToString()+" Mts";
+			}
 		}
 	}
 	// Update is called once per frame
