@@ -19,11 +19,17 @@ public class AutoManager : MonoBehaviour {
 			screenmanager.currentScreen.Hide();
 			screenmanager.Set("Game");
 		}
+		if (collision.gameObject.layer == 9) {
+			PlayerPrefs.SetString("perdio","auto");
+		}
+		if (collision.gameObject.layer == 10) {
+			PlayerPrefs.SetString("perdio","estacion");
+		}
 		animacionGameOut.AnimateAll();
 		ManagerGame.velocidad=0;
 		Transform trans=poschoques[Random.Range(0,poschoques.Length)];
-		iTween.RotateTo(cam.gameObject,iTween.Hash("time",0.7f,"rotation",trans));
-		iTween.MoveTo(cam.gameObject,iTween.Hash("time",0.7f,"position",trans,"oncomplete","particulas","oncompletetarget",this.gameObject));
+		iTween.RotateTo(cam.gameObject,iTween.Hash("time",0.5f,"rotation",trans));
+		iTween.MoveTo(cam.gameObject,iTween.Hash("time",0.2f,"position",trans,"oncomplete","particulas","oncompletetarget",this.gameObject));
 	}
 
 	void particulas(){

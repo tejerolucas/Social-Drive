@@ -188,11 +188,14 @@
      <Compile Include="Assets\Scripts\uGUITools.cs" />
      <Compile Include="Assets\Scripts\valor.cs" />
      <Compile Include="Assets\Scripts\webcamui.cs" />
+     <Compile Include="Assets\SpawnerCoins.cs" />
      <Compile Include="Assets\checkgass.cs" />
      <Compile Include="Assets\iTween\Plugins\iTween.cs" />
      <Compile Include="Assets\iTween\Sample\MoveSample.cs" />
      <Compile Include="Assets\iTween\Sample\RotateSample.cs" />
      <Compile Include="Assets\iTween\Sample\SampleInfo.cs" />
+     <Compile Include="Assets\moneda.cs" />
+     <Compile Include="Assets\nafta.cs" />
      <None Include="Assets\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlendOneOne.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\NoiseEffectShaderRGB.shader" />

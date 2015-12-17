@@ -23,6 +23,7 @@ public class estadofacebook : MonoBehaviour {
 	
 	public void boton (int num) {
 		if(num==tipo){
+			ManagerGame.monedas++;
 			manager.cantidadinterna-=1;
 			float valor=imagen.rect.height;
 			iTween.ValueTo(this.gameObject,iTween.Hash("from",valor,"to",0,"time",0.3f,"onupdatetarget",this.gameObject,"onupdate","achicar","oncompletetarget",this.gameObject,"oncomplete","destruir"));

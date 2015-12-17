@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: d933e3d481575ca4b8c63bf881596b5f
-timeCreated: 1450376613
+guid: 9590af9bebb5e1a4db4821df63f2d820
+timeCreated: 1450379923
 licenseType: Pro
 TextureImporter:
   fileIDToRecycleName: {}
@@ -27,7 +27,7 @@ TextureImporter:
   cubemapConvolutionExponent: 1.5
   seamlessCubemap: 0
   textureFormat: -3
-  maxTextureSize: 1024
+  maxTextureSize: 512
   textureSettings:
     filterMode: -1
     aniso: 16
@@ -43,14 +43,14 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: .5, y: .5}
-  spriteBorder: {x: 40, y: 0, z: 44, w: 0}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
   alphaIsTransparency: 1
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
     sprites: []
-  spritePackingTag: UIBUILDER_ATLAS_SLICEDx1
+  spritePackingTag: 
   userData: 
   assetBundleName: 
   assetBundleVariant: 

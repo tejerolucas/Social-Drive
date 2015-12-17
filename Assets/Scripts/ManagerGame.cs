@@ -6,8 +6,6 @@ using MaterialUI;
 public class ManagerGame : MonoBehaviour {
 	public static float velocidad;
 	public static bool jugando;
-	public Text kilometrostxt;
-	private float metros;
 	public GameObject auto;
 	public EZAnim derecha;
 	public EZAnim izquierda;
@@ -16,17 +14,24 @@ public class ManagerGame : MonoBehaviour {
 	private float delaymax;
 	public ManagerCelular mancelular;
 	public ScreenManager screenmanager;
-
+	public float gasmaximo;
+	public float gas;
+	public Image nivelgas;
+	private AsyncOperation async;
+	public static int monedas;
 	public EZAnim showgasanim;
 	public EZAnim hidegasanim;
 
 	void Start(){
+		monedas = 0;
 		delaymin=5;
 		delaymax=10;
 		celular=false;
+		gasmaximo = 100;
 	}
 
 	public void Acelerar () {
+		gas = gasmaximo;
 		jugando=true;
 		iTween.ValueTo(this.gameObject,iTween.Hash("time",1.5f,"from",0,"to",100,"onupdatetarget",this.gameObject,"onupdate","acelerando"));
 		float delay=Random.Range(delaymin,delaymax);
@@ -82,6 +87,11 @@ public class ManagerGame : MonoBehaviour {
 		velocidad=valor;
 	}
 
+	void perdistegas(){
+		StartCoroutine("load");
+		Invoke("fin",1.1f);
+	}
+
 	public void showgas(){
 		showgasanim.AnimateAll ();
 	}
@@ -90,17 +100,33 @@ public class ManagerGame : MonoBehaviour {
 		hidegasanim.AnimateAll ();
 	}
 
+	IEnumerator load() {
+		Debug.LogWarning("ASYNC LOAD STARTED - " +
+		                 "DO NOT EXIT PLAY MODE UNTIL SCENE LOADS... UNITY WILL CRASH");
+		async = Application.LoadLevelAsync("ruta");
+		async.allowSceneActivation = false;
+		yield return async;
+	}
+	
+	void fin(){
+		PlayerPrefs.SetString("perdio","gas");
+		screenmanager.Set("Fin");
+	}
+
 	void Update(){
-		if(jugando){
-			metros+=velocidad/1000;
-			if(metros>1000){
-				kilometrostxt.text=((int)metros/1000).ToString()+" Kms";
-			}else{
-				kilometrostxt.text=((int)metros).ToString()+" Mts";
+		if (jugando) {
+			gas -= Time.deltaTime;
+			nivelgas.fillAmount=gas/gasmaximo;
+			if(gas<=0){
+				if(screenmanager.currentScreen.name=="Celular"){
+					screenmanager.currentScreen.Hide();
+					screenmanager.Set("Game");
+				}
+				iTween.ValueTo(this.gameObject,iTween.Hash("time",1.5f,"from",100,"to",0,"onupdatetarget",this.gameObject,"onupdate","acelerando","oncompletetarget",this.gameObject,"oncomplete","perdistegas"));
 			}
 		}
 	}
-	// Update is called once per frame
+
 	public void Frenar () {
 		jugando=false;
 		velocidad=0;

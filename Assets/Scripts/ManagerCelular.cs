@@ -18,6 +18,7 @@ public class ManagerCelular : MonoBehaviour {
 	public ScreenManager screenmanager;
 	public static bool pausa;
 
+
 	void Awake () {
 		pausa=false;
 		cantidadestados=cantidad;
@@ -63,6 +64,7 @@ public class ManagerCelular : MonoBehaviour {
 			screenmanager.currentScreen.Hide();
 			screenmanager.Set("Game");
 		}
+		PlayerPrefs.SetString("perdio","social");
 		timerclock.alpha=0;
 		ManagerGame.velocidad=0;
 		iTween.Stop();

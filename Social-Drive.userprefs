@@ -1,10 +1,14 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\ManagerGame.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\AutoManager.cs">
     <Files>
-      <File FileName="Assets\Scripts\ManagerGame.cs" Line="90" Column="29" />
-      <File FileName="Assets\checkgass.cs" Line="14" Column="11" />
-      <File FileName="Assets\Scripts\AutoManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\SpawnerCoins.cs" Line="18" Column="1" />
+      <File FileName="Assets\Scripts\spawnerautos.cs" Line="1" Column="1" />
+      <File FileName="Assets\moneda.cs" Line="1" Column="1" />
+      <File FileName="Assets\checkgass.cs" Line="1" Column="1" />
+      <File FileName="Assets\nafta.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\ManagerGame.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\AutoManager.cs" Line="6" Column="20" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
