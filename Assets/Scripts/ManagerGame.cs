@@ -17,6 +17,9 @@ public class ManagerGame : MonoBehaviour {
 	public ManagerCelular mancelular;
 	public ScreenManager screenmanager;
 
+	public EZAnim showgasanim;
+	public EZAnim hidegasanim;
+
 	void Start(){
 		delaymin=5;
 		delaymax=10;
@@ -77,6 +80,14 @@ public class ManagerGame : MonoBehaviour {
 
 	void acelerando(float valor){
 		velocidad=valor;
+	}
+
+	public void showgas(){
+		showgasanim.AnimateAll ();
+	}
+
+	public void hidegas(){
+		hidegasanim.AnimateAll ();
 	}
 
 	void Update(){
