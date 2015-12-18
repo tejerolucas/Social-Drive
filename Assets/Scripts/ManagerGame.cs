@@ -17,15 +17,18 @@ public class ManagerGame : MonoBehaviour {
 	public float gasmaximo;
 	public float gas;
 	public Image nivelgas;
-	private AsyncOperation async;
 	public static int monedas;
+	public Text monedastxt;
 	public EZAnim showgasanim;
 	public EZAnim hidegasanim;
+	public Button gasbtn;
+	private int valorgas;
+	public Text valorgastxt;
 
 	void Start(){
 		monedas = 0;
-		delaymin=5;
-		delaymax=10;
+		delaymin=20;
+		delaymax=50;
 		celular=false;
 		gasmaximo = 100;
 	}
@@ -41,10 +44,12 @@ public class ManagerGame : MonoBehaviour {
 	void SendButton(){
 		if(ManagerGame.jugando){
 			if(!ManagerCelular.jugando){
-				float delay=Random.Range(delaymin,delaymax);
-				Invoke("SendButton",delay);
+
 				mancelular.Boton(0);
 			}
+			float delay=Random.Range(delaymin,delaymax);
+			Debug.Log("DELAY "+delay.ToString());
+			Invoke("SendButton",delay);
 		}
 	}
 
@@ -87,27 +92,35 @@ public class ManagerGame : MonoBehaviour {
 		velocidad=valor;
 	}
 
-	void perdistegas(){
-		StartCoroutine("load");
-		Invoke("fin",1.1f);
+	public void cargargas(){
+		if(valorgas<=monedas){
+			monedas-=valorgas;
+			valorgas=0;
+			hidegas();
+			gas=gasmaximo;
+		}
 	}
 
-	public void showgas(){
-		showgasanim.AnimateAll ();
+	void perdistegas(){
+		Invoke("fin",0.7f);
+	}
+
+	public void showgas(int valor){
+		if(valor<=monedas){
+			valorgastxt.text=valor.ToString();
+			showgasanim.AnimateAll ();
+			gasbtn.enabled=true;
+			valorgas=valor;
+		}
 	}
 
 	public void hidegas(){
+			gasbtn.enabled=false;
 		hidegasanim.AnimateAll ();
+		valorgas=0;
 	}
 
-	IEnumerator load() {
-		Debug.LogWarning("ASYNC LOAD STARTED - " +
-		                 "DO NOT EXIT PLAY MODE UNTIL SCENE LOADS... UNITY WILL CRASH");
-		async = Application.LoadLevelAsync("ruta");
-		async.allowSceneActivation = false;
-		yield return async;
-	}
-	
+
 	void fin(){
 		PlayerPrefs.SetString("perdio","gas");
 		screenmanager.Set("Fin");
@@ -115,14 +128,15 @@ public class ManagerGame : MonoBehaviour {
 
 	void Update(){
 		if (jugando) {
-			gas -= Time.deltaTime;
+			monedastxt.text=monedas.ToString();
+			gas -= Time.deltaTime*15f;
 			nivelgas.fillAmount=gas/gasmaximo;
 			if(gas<=0){
 				if(screenmanager.currentScreen.name=="Celular"){
 					screenmanager.currentScreen.Hide();
 					screenmanager.Set("Game");
 				}
-				iTween.ValueTo(this.gameObject,iTween.Hash("time",1.5f,"from",100,"to",0,"onupdatetarget",this.gameObject,"onupdate","acelerando","oncompletetarget",this.gameObject,"oncomplete","perdistegas"));
+				iTween.ValueTo(this.gameObject,iTween.Hash("time",0.5f,"from",100,"to",0,"onupdatetarget",this.gameObject,"onupdate","acelerando","oncompletetarget",this.gameObject,"oncomplete","perdistegas"));
 			}
 		}
 	}

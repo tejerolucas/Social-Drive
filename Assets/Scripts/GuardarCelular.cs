@@ -20,7 +20,7 @@ public class GuardarCelular : MonoBehaviour {
 
 	void accion(){
 		screenm.currentScreen.Hide();
-		screenm.Set("Game");
+		screenm.Back();
 		ManagerGame.celular=false;
 	}
 }

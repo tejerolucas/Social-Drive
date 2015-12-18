@@ -8,21 +8,21 @@ public class AutoManager : MonoBehaviour {
 	public ScreenManager screenmanager;
 	public GameObject punta;
 	public GameObject part;
-	public static AsyncOperation async;
 	public EZAnim animacionGameOut;
 
 
 	
 	// Update is called once per frame
 	void OnCollisionEnter(Collision collision) {
+		Debug.Log("HIT");
 		if(screenmanager.currentScreen.name=="Celular"){
 			screenmanager.currentScreen.Hide();
 			screenmanager.Set("Game");
 		}
-		if (collision.gameObject.layer == 9) {
+		if (collision.gameObject.layer == 10) {
 			PlayerPrefs.SetString("perdio","auto");
 		}
-		if (collision.gameObject.layer == 10) {
+		if (collision.gameObject.layer == 9) {
 			PlayerPrefs.SetString("perdio","estacion");
 		}
 		animacionGameOut.AnimateAll();
@@ -33,18 +33,11 @@ public class AutoManager : MonoBehaviour {
 	}
 
 	void particulas(){
-		StartCoroutine("load");
 		Instantiate(part,punta.transform.position,this.transform.rotation);
 		Invoke("fin",1.1f);
 	}
 
-	IEnumerator load() {
-		Debug.LogWarning("ASYNC LOAD STARTED - " +
-		                 "DO NOT EXIT PLAY MODE UNTIL SCENE LOADS... UNITY WILL CRASH");
-		async = Application.LoadLevelAsync("ruta");
-		async.allowSceneActivation = false;
-		yield return async;
-	}
+
 	
 	void fin(){
 		screenmanager.Set("Fin");

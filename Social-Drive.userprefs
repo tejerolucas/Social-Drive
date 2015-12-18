@@ -1,14 +1,15 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\AutoManager.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Fin.cs">
     <Files>
-      <File FileName="Assets\SpawnerCoins.cs" Line="18" Column="1" />
-      <File FileName="Assets\Scripts\spawnerautos.cs" Line="1" Column="1" />
-      <File FileName="Assets\moneda.cs" Line="1" Column="1" />
-      <File FileName="Assets\checkgass.cs" Line="1" Column="1" />
-      <File FileName="Assets\nafta.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\ManagerGame.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\AutoManager.cs" Line="6" Column="20" />
+      <File FileName="Assets/Scripts/Fin.cs" Line="9" Column="50" />
+      <File FileName="Assets/Scripts/AutoManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/autoinicio.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/ManagerGame.cs" Line="132" Column="27" />
+      <File FileName="Assets/Scripts/ManagerCelular.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/SacarCelular.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/estadofacebook.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/SocialManager.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
