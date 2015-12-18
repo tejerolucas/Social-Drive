@@ -10,7 +10,9 @@ public class checkgass : MonoBehaviour {
 	}
 
 	void OnTriggerEnter (Collider c) {
+		Debug.Log("CHOCO");
 		if (c.gameObject.layer == 8) {
+			Debug.Log("CHOCO AUTO");
 			mangame.showgas(valor);
 		}
 	}
