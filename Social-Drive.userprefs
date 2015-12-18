@@ -1,15 +1,16 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Fin.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/ManagerCelular.cs">
     <Files>
-      <File FileName="Assets/Scripts/Fin.cs" Line="9" Column="50" />
+      <File FileName="Assets/Scripts/estadofacebook.cs" Line="29" Column="78" />
+      <File FileName="Assets/Scripts/Fin.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/AutoManager.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/autoinicio.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/ManagerGame.cs" Line="132" Column="27" />
-      <File FileName="Assets/Scripts/ManagerCelular.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/ManagerGame.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/ManagerCelular.cs" Line="37" Column="1" />
       <File FileName="Assets/Scripts/SacarCelular.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/estadofacebook.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/SocialManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/MaterialUI/Scripts/ScreenManager.cs" Line="29" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

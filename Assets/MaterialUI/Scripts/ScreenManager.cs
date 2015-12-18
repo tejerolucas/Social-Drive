@@ -26,7 +26,6 @@ namespace MaterialUI
 		}
 		public void Set(int index)
 		{
-			Debug.Log("SET index");
 			screens[index].transform.SetAsLastSibling();
 
 			screens[index].Show(currentScreen);
@@ -36,7 +35,6 @@ namespace MaterialUI
 
 		public void Set(string name)
 		{
-			Debug.Log("SET NAME "+name);
 			for (int i = 0; i < screens.Length; i++)
 			{
 				if (screens[i].screenName == name)
@@ -49,7 +47,6 @@ namespace MaterialUI
 
 		public void Back()
 		{
-			Debug.Log("BACK");
 			lastScreen.ShowWithoutTransition();
 			currentScreen.Hide();
 			ScreenConfig temp = currentScreen;

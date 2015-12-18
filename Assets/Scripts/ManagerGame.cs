@@ -101,9 +101,6 @@ public class ManagerGame : MonoBehaviour {
 		}
 	}
 
-	void perdistegas(){
-		Invoke("fin",0.7f);
-	}
 
 	public void showgas(int valor){
 		if(valor<=monedas){
@@ -129,14 +126,15 @@ public class ManagerGame : MonoBehaviour {
 	void Update(){
 		if (jugando) {
 			monedastxt.text=monedas.ToString();
-			gas -= Time.deltaTime*15f;
+			gas -= Time.deltaTime/1.5f;
 			nivelgas.fillAmount=gas/gasmaximo;
 			if(gas<=0){
 				if(screenmanager.currentScreen.name=="Celular"){
 					screenmanager.currentScreen.Hide();
 					screenmanager.Set("Game");
 				}
-				iTween.ValueTo(this.gameObject,iTween.Hash("time",0.5f,"from",100,"to",0,"onupdatetarget",this.gameObject,"onupdate","acelerando","oncompletetarget",this.gameObject,"oncomplete","perdistegas"));
+				velocidad=0;
+				fin ();
 			}
 		}
 	}

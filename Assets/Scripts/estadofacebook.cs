@@ -26,8 +26,8 @@ public class estadofacebook : MonoBehaviour {
 			ManagerGame.monedas+=(tipo+1);
 			manager.cantidadinterna-=1;
 			float valor=imagen.rect.height;
-			iTween.ValueTo(this.gameObject,iTween.Hash("from",valor,"to",0,"time",0.3f,"onupdatetarget",this.gameObject,"onupdate","achicar","oncompletetarget",this.gameObject,"oncomplete","destruir"));
-			iTween.ValueTo(this.gameObject,iTween.Hash("from",1,"to",0,"time",0.2f,"onupdatetarget",this.gameObject,"onupdate","alpha"));
+			iTween.ValueTo(this.gameObject,iTween.Hash("from",valor,"to",0,"time",0.15f,"onupdatetarget",this.gameObject,"onupdate","achicar","oncompletetarget",this.gameObject,"oncomplete","destruir"));
+			iTween.ValueTo(this.gameObject,iTween.Hash("from",1,"to",0,"time",0.1f,"onupdatetarget",this.gameObject,"onupdate","alpha"));
 		}
 	}
 

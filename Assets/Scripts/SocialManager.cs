@@ -14,7 +14,6 @@ public class SocialManager : MonoBehaviour {
 
 	void Awake () {
 		canvas=this.gameObject.GetComponent<CanvasGroup>();
-		CrearEstados();
 	}
 	
 	void Update () {
@@ -39,6 +38,7 @@ public class SocialManager : MonoBehaviour {
 	}
 
 	public void CrearEstados(){
+		Debug.Log("CREAR ESTADOS");
 		barra.fillAmount=1;
 		cantidadinterna=0;
 		for(int i=0;i<cantidad;i++){
@@ -50,6 +50,7 @@ public class SocialManager : MonoBehaviour {
 			est.manager=this;
 			estados.Add(go);
 		}
+		ManagerCelular.jugando=true;
 	}
 
 	void Limpiarestados(){

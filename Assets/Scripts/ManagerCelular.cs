@@ -34,7 +34,6 @@ public class ManagerCelular : MonoBehaviour {
 	}
 
 	public void settimer(string valor){
-		Debug.Log("SET");
 		float resultado;
 		bool result=float.TryParse(valor,out resultado);
 		tiempo=resultado;
@@ -82,7 +81,6 @@ public class ManagerCelular : MonoBehaviour {
 	void iniciartimer(){
 		Debug.Log("INICIAR TIMER");
 		Debug.Log(tiempo);
-		jugando=true;
 	}
 
 	void canvasalpha(float valor){
